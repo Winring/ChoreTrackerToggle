@@ -14,6 +14,12 @@ local function ToggleChoreTracker()
     end
 end
 
+local function ToggleChoreTrackerSettings()
+	ChatFrame1EditBox:SetText("/choretracker")
+    ChatEdit_SendText(ChatFrame1EditBox)
+    
+end
+
 -- Create a button on the minimap
 local button = CreateFrame("Button", "ChoreTrackerMinimapButton", Minimap)
 button:SetSize(31, 31)  -- Set the button size
@@ -38,6 +44,9 @@ button:SetScript("OnMouseDown", function(self, button)
     if button == "LeftButton" then
         ToggleChoreTracker()
     end
+	if button == "RightButton" then
+        ToggleChoreTrackerSettings()
+    end
 end)
 
 -- Function to get the position of the button **outside** the minimap
@@ -50,6 +59,19 @@ end
 
 -- Store the angle of the button's position (you can change the default value)
 local minimapButtonAngle = 45
+
+-- Přidání tooltipu
+button:SetScript("OnEnter", function(self)
+    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+	GameTooltip:AddLine("ChoreTrackerToggle", 1, 0.82, 0)
+    GameTooltip:AddLine("|cff00ff00Click left|r for show/hide ChoreTracker", 1, 1, 1)
+    GameTooltip:AddLine("|cff00ff00Click right|r for ChoreTracker settings", 1, 1, 1)
+    GameTooltip:Show()
+end)
+
+button:SetScript("OnLeave", function(self)
+    GameTooltip:Hide()
+end)
 
 -- Initialize the button's position
 UpdateButtonPosition(minimapButtonAngle)
