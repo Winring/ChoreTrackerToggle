@@ -3,3 +3,5 @@ Enjoy!
 
 Left click - open close ChoreTracker
 Right click - open ChoreTracker settings
+
+Created by Winring
