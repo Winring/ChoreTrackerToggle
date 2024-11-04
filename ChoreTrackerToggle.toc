@@ -1,7 +1,7 @@
 ## Interface: 110005
 ## Title: Chore Tracker Toggle
 ## Notes: Adds a minimap button to toggle the Chore Tracker.
-## Version: 1.0
+## Version: 1.0.3
 ## X-Curse-Project-ID: 1127336
 ## Author: Winring
 ChoreTrackerToggle.lua
