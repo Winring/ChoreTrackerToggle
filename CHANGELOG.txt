@@ -4,3 +4,6 @@ V1.0.4
 
 V1.0.5
 - New icon also used in the addon list
+
+V1.0.6
+- Version update
