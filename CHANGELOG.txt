@@ -7,3 +7,6 @@ V1.0.5
 
 V1.0.6
 - Version update
+
+V1.0.7
+- Version update
